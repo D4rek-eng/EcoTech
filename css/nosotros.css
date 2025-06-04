@@ -299,4 +299,113 @@ nav .icon-bars .line {
     }
     }
 
+     
+  /* ==============================
+     RESPONSIVE: apilar en columna a partir de 768 px
+     ============================== */
+  @media (max-width: 768px) {
+    /* 1) .nosotros: ya estaba centrado, no hace falta cambiar */
+    .nosotros {
+      padding: 1rem;
+    }
+    .nosotros h1 {
+        margin-top: 20px;
+      font-size: 1.5rem;
+    }
+  
+    /* 2) Primer Bloque (.main) */
+    .main{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+      }
+      .main .historia,
+      .main .historia-img {
+        flex: 1 1 100%;
+      }
+      .main .historia-img {
+        margin-top: 1rem;
+      }
+      .main .historia strong {
+        font-size: 1.2rem;
+      }
+      .main .historia p {
+        font-size: 0.95rem;
+      }
+  
+    /* 3) Segundo Bloque (.servicios-2) */
+    .experiencia {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+    .experiencia-img,
+    .exp {
+      flex: 1 1 100%;
+    }
+    .experiencia-img {
+      margin-bottom: 1rem;
+    }
+    .exp strong {
+      font-size: 1.2rem;
+    }
+    .exp p {
+      font-size: 0.95rem;
+    }
+  
+    /* 4) Tercer Bloque (igual que el primero, pero apilado) */
+    .main {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+    .main .historia,
+    .main .historia-img img {
+      flex: 1 1 100%;
+    }
+    .main  .historia-img img {
+      margin-top: 1rem;
+    }
+    .main  .historia strong {
+      font-size: 1.2rem;
+    }
+    .main  .historia p {
+      font-size: 0.95rem;
+    }
+  
+    /* 5) Cuarto Bloque (igual que el segundo, pero apilado) */
+    .experiencia {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+      }
+      .experiencia-img,
+      .exp {
+        flex: 1 1 100%;
+      }
+      .experiencia-img {
+        margin-bottom: 1rem;
+      }
+      .exp strong {
+        font-size: 1.2rem;
+      }
+      .exp p {
+        font-size: 0.95rem;
+      }
+    
 
+
+
+
+    /* Responsive Footer */
+@media screen and (max-width:768px){
+    .Pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+
+}
