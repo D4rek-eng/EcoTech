@@ -237,6 +237,313 @@ button a {
     }
 }
 
+/* ==============================
+   ESTILO GENERAL (pantallas ≥ 769 px)
+   ============================== */
+
+/* -----------------------------------
+   1) TÍTULO “Somos Ecotech…”
+   ----------------------------------- */
+   /*.nosotros {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .nosotros > div {
+    width: 100%;
+    max-width: 1200px; /* opcional: ancho máximo para no forzar líneas demasiado largas 
+    display: flex;
+    justify-content: center;
+  }
+  .nosotros h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 0;
+    text-align: center;
+  }*/
+  
+  /* -----------------------------------
+     2) PRIMER BLOQUE DE SERVICIOS (main .main)
+     ----------------------------------- */
+  .main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* centrar en la página */
+  }
+  
+  /* Texto del primer servicio (lado izquierdo) */
+  .main .servicios {
+    flex: 0 0 60%;
+  }
+  .main .servicios strong {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .main .servicios p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0;
+  }
+  
+  /* Imagen del primer servicio (lado derecho) */
+  .main .servicios-img {
+    flex: 0 0 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main .servicios-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* Botón “Más Información” */
+  .main .servicios .more-info {
+    margin-top: 1rem;
+  }
+  .main .servicios .more-info button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    border: none;
+    background-color: #32a622; /* ajústalo si quieres otro color */
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .main .servicios .more-info button a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* -----------------------------------
+     3) SEGUNDO BLOQUE “servicios-2”
+     (imagen a la izquierda, texto a la derecha)
+     ----------------------------------- */
+  .servicios-2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Para que el texto quede a la DERECHA y la imagen a la IZQUIERDA: */
+  .servicios-2-img {
+    flex: 0 0 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .servicios-2-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* Texto del segundo servicio (lado derecho) */
+  .servicios-txt {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  .servicios-txt strong {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .servicios-txt p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 20px;
+  }
+  .servicios-txt .more-info {
+    margin-top: 1rem;
+  }
+  .servicios-txt .more-info button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .servicios-txt .more-info button a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* -----------------------------------
+     4) TERCER BLOQUE (idéntico al primero, alternando orden)
+     ----------------------------------- */
+  .section-main-3 {
+    /* Si quieres usar exactamente el mismo .main del primer bloque, puedes
+       reusar la clase .main otra vez. Si prefieres, renombra esta sección como
+       .main-3 o algo similar. */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Suponiendo que el HTML para este bloque es idéntico al primer .main */
+  
+  .section-main-3 .servicios {
+    flex: 0 0 60%;
+  }
+  .section-main-3 .servicios-img {
+    flex: 0 0 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-main-3 .servicios-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* -----------------------------------
+     5) CUARTO BLOQUE (idéntico al segundo, alternando orden)
+     ----------------------------------- */
+  .section-serv2-4 {
+    /* Si usas exactamente el mismo HTML .servicios-2, no necesitas esta clase;
+       de lo contrario, ajústala para apuntar al <section class="servicios-2"> del cuarto bloque */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .section-serv2-4 .servicios-2-img {
+    flex: 0 0 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-serv2-4 .servicios-txt {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  .section-serv2-4 .servicios-2-img img,
+  .section-serv2-4 .servicios-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* ==============================
+     RESPONSIVE: apilar en columna a partir de 768 px
+     ============================== */
+  @media (max-width: 768px) {
+    /* 1) .nosotros: ya estaba centrado, no hace falta cambiar */
+    .nosotros {
+      padding: 1rem;
+    }
+    .nosotros h1 {
+      font-size: 1.5rem;
+    }
+  
+    /* 2) Primer Bloque (.main) */
+    .main {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+    .main .servicios,
+    .main .servicios-img {
+      flex: 1 1 100%;
+    }
+    .main .servicios-img {
+      margin-top: 1rem;
+    }
+    .main .servicios strong {
+      font-size: 1.2rem;
+    }
+    .main .servicios p {
+      font-size: 0.95rem;
+    }
+  
+    /* 3) Segundo Bloque (.servicios-2) */
+    .servicios-2 {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+    .servicios-2-img,
+    .servicios-txt {
+      flex: 1 1 100%;
+    }
+    .servicios-2-img {
+      margin-bottom: 1rem;
+    }
+    .servicios-txt strong {
+      font-size: 1.2rem;
+    }
+    .servicios-txt p {
+      font-size: 0.95rem;
+    }
+  
+    /* 4) Tercer Bloque (igual que el primero, pero apilado) */
+    .section-main-3 {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+    .section-main-3 .servicios,
+    .section-main-3 .servicios-img {
+      flex: 1 1 100%;
+    }
+    .section-main-3 .servicios-img {
+      margin-top: 1rem;
+    }
+    .section-main-3 .servicios strong {
+      font-size: 1.2rem;
+    }
+    .section-main-3 .servicios p {
+      font-size: 0.95rem;
+    }
+  
+    /* 5) Cuarto Bloque (igual que el segundo, pero apilado) */
+    .section-serv2-4 {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+    .section-serv2-4 .servicios-2-img,
+    .section-serv2-4 .servicios-txt {
+      flex: 1 1 100%;
+    }
+    .section-serv2-4 .servicios-2-img {
+      margin-bottom: 1rem;
+    }
+    .section-serv2-4 .servicios-txt strong {
+      font-size: 1.2rem;
+    }
+    .section-serv2-4 .servicios-txt p {
+      font-size: 0.95rem;
+    }
+  }
+  
 /* Footer */
 .Pie-pagina {
     width: 100%;
